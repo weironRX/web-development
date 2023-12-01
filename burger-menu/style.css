@@ -71,6 +71,7 @@ body {
 .menu {
 }
 .menu__icon {
+    display: none;
 }
 .menu__body {
 }
@@ -156,5 +157,70 @@ body._touch {
         .menu__arrow {
             transform: rotate(180deg);
         }
+    }
+}
+@media (max-width: 767px) {
+    .menu__icon {
+        display: block;
+        z-index: 5;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menu__icon > span,
+    .menu__icon::before,
+    .menu__icon::after {
+        position: absolute;
+        left: 0;
+        height: 10%;
+        width: 100%;
+        transition: all .4s ease-in;
+        background-color: aliceblue;
+    }
+
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+
+    .menu__icon::before {
+        top: 0;
+    }
+
+    .menu__icon::after {
+        bottom: 0;
+    }
+
+    .menu__icon > span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 100px 30px 30px 30px;
+        transition: left .3s ease-in-out;
+    }
+
+    .menu__list > li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .menu__list > li {
+        flex-wrap: wrap;
+    }
+
+    .menu__link {
+        font-size: 24px;
+    }
+
+    .menu__sub-list {
+        flex: 1 1 100%;
     }
 }
