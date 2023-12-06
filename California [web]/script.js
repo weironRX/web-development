@@ -19,3 +19,18 @@ if (detectMob()) {
 } else {
     document.body.classList.add("_pc")
 }
+
+const menuArrows = document.querySelectorAll(".menu__arrow")
+
+    if (menuArrows.length) {
+        menuArrows.forEach(arrow => 
+            arrow.addEventListener("click", () => {
+                menuArrows.forEach(e => {
+                    if (e != arrow) {
+                        e.parentElement.classList.remove("_active")
+                    }
+                })
+                arrow.parentElement.classList.toggle("_active")
+            })
+        )
+    }

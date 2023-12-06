@@ -24,3 +24,76 @@ body._locked {
     padding: 0 10px;
     box-sizing: border-box;
 }
+
+.header {
+}
+.header__container {
+    padding: 30px 0;
+    display: flex;
+}
+._container {
+}
+.header__logo {
+    flex: 35.16228748% 0 0;
+}
+.header__menu {
+    flex: 56.87789799% 0 0;
+}
+.menu {
+}
+.menu__icon {
+}
+.menu__body {
+}
+.menu__list {
+    display: flex;
+}
+.menu__list > li {
+    position: relative;
+    display: flex;
+
+    margin: 0 20px 0 0;
+}
+.menu__list > li:not(:first-child) {
+    margin: 0 0 0 44px;
+}
+.menu__link {
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-right: 4px;
+}
+.menu__arrow {
+    transform: rotate(-225deg);
+}
+.arrow {
+    width: 6px;
+    height: 8px;
+    border-top: 1.2px solid #000;
+    border-right: 1.2px solid #000;
+}
+.menu__sub-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: black;
+    padding: 15px;
+    min-width: 200px;
+    transform: translate(0px, 10%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .3s;
+}
+.menu__list > li._active .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translate(0, 0);
+}
+.menu__sub-link {
+}
