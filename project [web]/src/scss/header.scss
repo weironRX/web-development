@@ -1,0 +1,98 @@
+@import "./tools.scss";
+
+.wrapper {
+}
+.header {
+
+    // .header__container
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+
+        @include adaptive-value("padding-top", 59, 20, 0);
+        @include adaptive-value("padding-bottom", 59, 20, 0); 
+    }
+ 
+    // .header__logo 
+    &__logo {
+        @include adaptive-font(24, 20);
+
+        color: $textColor;
+        font-family: Fira Sans;
+        font-weight: 700;
+        line-height: 116.667%;
+        letter-spacing: -1px;
+        cursor: pointer;
+        flex: 0 0 calc(571/1110 * 100%);
+    }
+
+    // .header__search
+    &__search {
+        flex: 1 0 auto;
+    }
+
+    .search-form {
+
+        &__icon {
+            font-size: 20px;
+            transition: all .9s ease;
+
+            &:hover {
+                color: $blueColor;
+            }
+        }
+    }
+}
+
+.header {
+
+    // .header__search
+    &__search {
+    }
+}
+
+
+
+
+.menu-icon {
+    width: 34px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    & > div {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background-color: $textColor;
+        transition: .3s all ease;
+    }
+
+    & div:nth-child(1) {
+        top: 2px;
+        left: 0;
+        width: 100%;
+    }
+
+    & div:nth-child(2) {
+        bottom: 0;
+        right: 0;
+        width: 18px;
+    }
+
+    &:hover {
+        & div:nth-child(1) {
+            width: 140%;
+            margin-left: -40%;
+            background-color: $blueColor;
+        }
+
+        & div:nth-child(2) {
+            width: 20px;
+            margin-left: -4px;
+        }
+    }
+}

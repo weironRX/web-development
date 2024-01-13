@@ -1,0 +1,41 @@
+@import "./reset.scss";
+@import "./settings.scss";
+@import "./tools.scss";
+@import "./ui.scss";
+
+._container {
+    max-width: #{$containerWidth + px};
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+} 
+
+body._locked {
+    overflow: hidden;
+}
+
+@import "./header.scss"; 
+@import "./footer.scss";
+ 
+
+body { 
+    height: 100%;
+}
+ 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    flex: 1 0 auto;
+}
+
+._ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}

@@ -1,0 +1,88 @@
+@import "./reset.scss";
+@import "./settings.scss";
+@import "./tools.scss";
+@import "./ui.scss";
+@import "./fonts.scss";
+
+._container {
+    max-width: #{$containerWidth + px};
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+} 
+
+@import "./header.scss"; 
+@import "./footer.scss";
+ 
+
+body { 
+    height: 100%;
+}
+ 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    flex: 1 0 auto;
+}
+
+._ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.get-started {
+
+    // .get-started__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .get-started__main
+
+    &__main {
+        flex: 0 0 calc(474 / 1110 * 100%);
+    }
+
+    // .get-started__title
+    &__title {
+    }
+
+    // .get-started__text
+    &__text {
+    }
+
+    // .get-started__button
+    &__button {
+    }
+
+    // .get-started__bar
+    &__bar {
+    }
+
+    // .get-started__picture
+    &__picture {
+    }
+
+    // .get-started__image
+    &__image {
+    }
+
+    // .get-started__main-image
+    &__main-image {
+        max-height: 840px;
+    }
+
+    // .get-started__add-image
+    &__add-image {
+    }
+}
+
