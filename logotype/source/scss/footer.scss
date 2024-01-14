@@ -124,16 +124,18 @@
 
     // .main-footer__nav
     &__nav {
+        min-height: max-content;
         position: relative;
         z-index: 2;
         display: grid;
         padding: 62px 30px 56px 30px;
         grid-template-columns: minmax(441px, 1fr) 41px 154px 77px 231px;
-        grid-template-rows: 160px 160px 85px;
+        grid-template-rows: 160px 160px 85px 1fr;
         grid-template-areas: 
         "menu . contacts . bond"
         "menu . time . address"
-        "menu . callback callback callback";
+        "menu . callback callback callback"
+        "menu . . . .";
     
 
         @media (max-width: 1000px) {
@@ -230,7 +232,7 @@
 
     // .footer-main-menu__link
     &__link {
-        @include adaptive-font(17, 12);
+        @include adaptive-value("font-size", 17, 12, 1);
 
         color: #DFE6FF;
         font-family: Inter;
@@ -263,7 +265,7 @@
 
     // .contacts-footer__number
     &__number {
-        @include adaptive-font(17, 14);
+        @include adaptive-value("font-size", 17, 12, 1);
 
         color: #FFF;
         font-family: Inter;

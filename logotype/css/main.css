@@ -1040,6 +1040,9 @@ body {
   z-index: 0;
 }
 .main-footer__nav {
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   position: relative;
   z-index: 2;
   display: -ms-grid;
@@ -1047,9 +1050,9 @@ body {
   padding: 62px 30px 56px 30px;
   -ms-grid-columns: minmax(441px, 1fr) 41px 154px 77px 231px;
   grid-template-columns: minmax(441px, 1fr) 41px 154px 77px 231px;
-  -ms-grid-rows: 160px 160px 85px;
-  grid-template-rows: 160px 160px 85px;
-      grid-template-areas: "menu . contacts . bond" "menu . time . address" "menu . callback callback callback";
+  -ms-grid-rows: 160px 160px 85px 1fr;
+  grid-template-rows: 160px 160px 85px 1fr;
+      grid-template-areas: "menu . contacts . bond" "menu . time . address" "menu . callback callback callback" "menu . . . .";
 }
 @media (max-width: 1000px) {
   .main-footer__nav {
@@ -1072,7 +1075,7 @@ body {
 }
 .main-footer__menu {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 4;
   -ms-grid-column: 1;
   grid-area: menu;
 }
@@ -1205,20 +1208,16 @@ body {
   margin-bottom: calc(8px + 12 * ((100vw - 375px) / 1545));
 }
 .footer-main-menu__link {
+  font-size: 17px;
   color: #DFE6FF;
   font-family: Inter;
   font-size: 17px;
   font-weight: 400;
   line-height: normal;
 }
-@media (max-width: 767px) {
+@media (max-width: 1330px) {
   .footer-main-menu__link {
-    font-size: calc(12px + 8.5 * ((100vw - 375px) / 1920));
-  }
-}
-@media (min-width: 767px) {
-  .footer-main-menu__link {
-    font-size: calc(12px + 5 * (100vw / 1920));
+    font-size: calc(12px + 5 * ((100vw - 375px) / 955));
   }
 }
 .footer-main-menu__link:hover {
@@ -1256,20 +1255,16 @@ body {
   margin-bottom: calc(10px + 24 * ((100vw - 375px) / 1545));
 }
 .contacts-footer__number {
+  font-size: 17px;
   color: #FFF;
   font-family: Inter;
   font-size: 17px;
   font-weight: 400;
   line-height: normal;
 }
-@media (max-width: 767px) {
+@media (max-width: 1330px) {
   .contacts-footer__number {
-    font-size: calc(14px + 5.1 * ((100vw - 375px) / 1920));
-  }
-}
-@media (min-width: 767px) {
-  .contacts-footer__number {
-    font-size: calc(14px + 3 * (100vw / 1920));
+    font-size: calc(12px + 5 * ((100vw - 375px) / 955));
   }
 }
 .contacts-footer__number:not(:first-child) {
