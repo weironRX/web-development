@@ -85,12 +85,12 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: rgba(0, 26, 119, 0.87);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 0;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,15 +100,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
-  visibility: hidden;
+  height: 0;
+  opacity: 0;
 }
 .custom-popup._active {
-  -webkit-animation: fadeIn 0.5s;
-          animation: fadeIn 0.5s;
-  visibility: visible;
+  height: 100vh;
+  opacity: 1;
   padding: 15px;
   overflow: hidden;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 .custom-popup._active .custom-popup__body {
   visibility: visible;
@@ -119,30 +120,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .custom-popup__header {
   display: -webkit-box;
@@ -307,6 +284,7 @@ body {
 }
 
 .logo-header__title {
+  cursor: pointer;
   color: #292929;
   font-family: Inter;
   font-weight: 700;
@@ -1073,6 +1051,9 @@ body {
     font-size: calc(12px + 5 * (100vw / 1920));
   }
 }
+.footer-main-menu__link:hover {
+  text-decoration: underline;
+}
 
 .footer-title {
   color: #8E9FD9;
@@ -1092,6 +1073,15 @@ body {
   }
 }
 
+.contacts-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .contacts-footer__title {
   margin-bottom: calc(10px + 24 * ((100vw - 320px) / 1600));
 }
@@ -1172,6 +1162,7 @@ body {
   margin-bottom: calc(10px + 12 * ((100vw - 320px) / 1600));
 }
 .address-footer__button {
+  cursor: pointer;
   border-radius: 32px;
   border: 1px solid #DDDDDD;
   color: #FFF;
@@ -1195,6 +1186,7 @@ body {
 }
 
 .callback-footer__button {
+  cursor: pointer;
   border-radius: 32px;
   border: 1px solid #DDDDDD;
   color: #FFF;

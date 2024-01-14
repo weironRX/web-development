@@ -58,9 +58,7 @@ body {
     transition: .5s all;
 
     &:hover {
-        & {
-            background: none;
-            color: #4460BF;
-        }
+        background: none;
+        color: #4460BF;
     }
 }

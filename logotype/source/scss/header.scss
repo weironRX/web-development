@@ -9,6 +9,7 @@
     &__title {
         @include adaptive-font(24, 18);
 
+        cursor: pointer;
         color: #292929;
         font-family: Inter;
         font-weight: 700;

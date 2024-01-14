@@ -224,6 +224,10 @@
         font-size: 17px;
         font-weight: 400;
         line-height: normal;
+
+        &:hover {
+            text-decoration: underline
+        }
     }
 }
 .footer-title {
@@ -236,6 +240,8 @@
     line-height: 139.023%;
 }
 .contacts-footer {
+    display: flex;
+    flex-direction: column;
 
     // .contacts-footer__title
     &__title {
@@ -324,6 +330,7 @@
 
     // .address-footer__button
     &__button {
+        cursor: pointer;
         border-radius: 32px;
         border: 1px solid #DDDDDD;
     
@@ -345,6 +352,7 @@
 
     // .callback-footer__button
     &__button {
+        cursor: pointer;
         border-radius: 32px;
         border: 1px solid #DDDDDD;
     
