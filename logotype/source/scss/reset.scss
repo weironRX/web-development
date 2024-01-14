@@ -9,18 +9,3 @@ table{border-collapse:collapse;border-spacing:0}
 button{background:none;border:none;}
 input{outline:none;border:none;background:none;}
 a{text-decoration:none;}
-
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password] {
-  width: 50%;
-}
-
-/* new line - adjustment to smaller input fields */
-input[type=text].size-small,
-input[type=email].size-small,
-input[type=url].size-small,
-input[type=password].size-small {
-  width: 25%;
-}

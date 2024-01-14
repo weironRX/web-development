@@ -24,7 +24,7 @@
 
     // .footer__main
     &__main {
-        flex: 1 0 auto;
+        flex: 1 0 77.1%;
     }
 
     @media (max-width: 1000px) {
@@ -138,9 +138,9 @@
 
         @media (max-width: 1000px) {
             & {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 50% 50%;
                 row-gap: 20px;
-                @include adaptive-value("column-gap", 41, 6, 0);
+                @include adaptive-value("column-gap", 41, 16, 0);
                 grid-template-rows: 1fr 110px 100px 85px;
                 grid-template-areas: 
                 "menu menu"
@@ -190,7 +190,6 @@
 
     // .footer-main-menu__list
     &__list {
-        max-width: 448px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -198,7 +197,7 @@
 
         @media (max-width: $sm + px) {
             & {
-                @include adaptive-value("column-gap", 41, 10, 0);
+                @include adaptive-value("column-gap", 41, 16, 0);
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -218,7 +217,7 @@
 
     // .footer-main-menu__link
     &__link {
-        @include adaptive-font(17, 13);
+        @include adaptive-font(17, 12);
 
         color: #DFE6FF;
         font-family: Inter;
@@ -252,6 +251,12 @@
         font-size: 17px;
         font-weight: 400;
         line-height: normal;
+
+        &:not(:first-child) {
+            & {
+                margin-top: 10px;
+            }
+        }
     }
 
     @media (max-width: $sm + px) {
@@ -281,12 +286,6 @@
         font-weight: 400;
         line-height: normal;
     }
-
-    @media (max-width: $sm + px) {
-        & {
-            max-width: 102px;
-        }
-    }
 }
 .bond-footer {
 
@@ -305,8 +304,10 @@
 
     // .bond-footer__email
     &__email {
-        @include adaptive-font(17, 15);
-
+        margin-top: 10px;
+        @include adaptive-font(17, 13);
+    
+        text-decoration: underline;
         color: #FFF;
         font-family: Inter;
         font-size: 17px;

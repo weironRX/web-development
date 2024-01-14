@@ -20,7 +20,7 @@
                         <img src="./img/near.png" class="nearby-header__icon"></img>
                         <div class="nearby-header__title">Ищете автошколу рядом с домом/учёбой?</div>
                     </div>
-                    <div class="nearby-header__button">ton
+                    <div class="nearby-header__button">Смотреть поблизости
                         <img src='./img/arrow.svg' class="_ibg">
                     </div>
                 </div>
@@ -89,7 +89,29 @@
                 </div>
             </div>
         </header>
-        <main class="page"></main>
+        <main class="page">
+            <div class="_container">
+
+                <button class="button__sign-up">
+                    Пробный урок
+                </button>
+            </div>
+            <div class="custom-popup">
+                <div class="custom-popup__body">
+                    <div class="custom-popup__header">
+                        <div class="custom-popup__icon"></div>
+                    </div>
+                    <div class="custom-popup__title">Оставьте заявку на обучение, </div>
+                    <div class="custom-popup__subtitle">и мы ответим вам в ближайшие 5-10 минут</div>
+                    <form action="$" class="custom-popup__form">
+                        <input type="text" placeholder="Имя" autocomplete="off" name="form[]" class="custom-popup__input">
+                        <input type="text" placeholder="Номер телефона" autocomplete="off" name="form[]" class="custom-popup__input">
+                        <button type="submit" class="custom-popup__button">Записаться на урок</button>
+                    </form>
+                    <div class="custom-popup__agreement">Соглашаюсь с условиями <a href="#">политики конфиденциальности</a></div>
+                </div>
+            </div>
+        </main>
         <footer class="footer">
             <div class="footer__container _container">
                 <div class="footer__allrights allrights-footer">
@@ -142,14 +164,14 @@
                         <div class="main-footer__bond bond-footer">
                             <div class="bond-footer__title footer-title">Связь с нами</div>
                             <div class="bond-footer__icons">
-                                <img class="bond-footer__icon" src="./img/icons/telegram.png" alt="">
-                                <img class="bond-footer__icon" src="./img/icons/whatsapp.png" alt="">
+                                <img class="bond-footer__icon" src="./img/icons/telegram.svg" alt="">
+                                <img class="bond-footer__icon" src="./img/icons/whatsapp.svg" alt="">
                             </div>
                             <div class="bond-footer__email">shcollofficial@mail.ru</div>
                         </div>
                         <div class="main-footer__address address-footer">
                             <div class="address-footer__title footer-title">Адрес</div>
-                            <button class="address-footer__button">Смотреть поблизости</button>
+                            <button class="address-footer__button"><span>Смотреть поблизости</span></button>
                         </div>
                         <div class="main-footer__callback callback-footer">
                             <button class="callback-footer__button">обратный звонок
@@ -161,6 +183,8 @@
             </div>
         </footer>
     </div>
+
     <script src="./js/script.js"></script>
+    <script src="./js/popup.js"></script>
 </body>
 </html>
