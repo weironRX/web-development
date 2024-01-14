@@ -3,6 +3,7 @@
 @import "./tools.scss";
 @import "./ui.scss";
 @import "./popup.scss";
+@import "./blocks.scss";
 
 ._container {
     max-width: #{$containerWidth + px};
@@ -17,7 +18,7 @@ body._locked {
 
 @import "./header.scss"; 
 @import "./footer.scss";
- 
+  
 
 body { 
     height: 100%;

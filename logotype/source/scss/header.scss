@@ -5,7 +5,6 @@
 
 .logo-header {
 
-    // .logo-header__title
     &__title {
         @include adaptive-font(24, 18);
 
@@ -16,7 +15,6 @@
         line-height: normal;
     }
 
-    // .logo-header__description
     &__description {
         color: #616161;
         font-family: Inter;
@@ -32,20 +30,14 @@
     }
 }
 .nearby-header {
+    margin-top: -24px;
 
-    // .nearby-header__question
     &__question {
         display: flex;
         align-items: center;
         margin: 0 11px;
     }
 
-    // .nearby-header__icon
-    &__icon {
-
-    }
-
-    // .nearby-header__title
     &__title {
         margin-left: 6px;
         color: #070E27;
@@ -53,32 +45,30 @@
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
-        line-height: 128.523%; /* 12.852px */
+        line-height: 128.523%; 
     }
 
-    // .nearby-header__button
     &__button {
         border-radius: 32px;
         border: 1px solid #DDDDDD;
-        padding: 0 20px 0 0;
     
-        color: #3A466D;
-        text-align: center;
-        font-family: Inter;
-        font-size: 11px;
-        font-weight: 400;
-        line-height: normal;
         position: relative;
         height: 30px;
+        width: 180px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        padding: 0 11px 0 16px;
         margin-top: 5px;
-    
-        & > img {
-            position: absolute;
-            top: 3px;
-            right: 12px;
+        cursor: pointer;
+
+        & > span {
+            color: #3A466D;
+            cursor: pointer;
+            font-family: Inter;
+            font-size: 11px;
+            font-weight: 400;
+            cursor: pointer;
         }
     }
 }
@@ -86,7 +76,6 @@
     display: flex;
     align-items: center;
 
-    // .subcribe-header__title
     &__title {
         color: #616161;
         font-family: Inter;
@@ -95,7 +84,6 @@
         line-height: 139.023%;
     }
 
-    // .subcribe-header__icon
     &__icon {
         width: 32px;
         height: 32px;
@@ -108,30 +96,17 @@
         }
     }
 }
-.ask-header {
-    display: flex;
-    align-items: center;
 
-    // .ask-header__title
-    &__title {
-        color: #616161;
-        font-family: Inter;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 139.023%;
-
-    }
-
-    // .ask-header__icon
-    &__icon {
+@media (max-width: $xl + px) {
+    .menu__network .network__title {
+        display: block;
+        width: 99px;
         margin-left: 7px;
-        width: 32px;
-        height: 32px;
     }
 }
+
 .number-header {
 
-    // .number-header__title
     &__title {
         color: #616161;
         font-family: Inter;
@@ -153,43 +128,22 @@
         }
     }
 
-    // .number-header__number
     &__number {
-        @include adaptive-font(20, 17);
+        @include adaptive-font(20, 18);
 
         color: #070E27;
         font-family: Inter;
         font-weight: 700;
         line-height: normal;
         margin-top: 4px;
+
+        &_big {
+            font-size: 20px;
+        }
     }
 }
 .callback-header {
 
-    // .callback-header__button
-    &__button {
-        border-radius: 32px;
-        border: 1px solid #DDDDDD;
-    
-        color: #656565;
-        font-family: Inter;
-        font-size: 14px;
-        font-weight: 800;
-        line-height: normal;
-        text-transform: uppercase;
-        position: relative;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 56px 0 20px;
-    
-        & > img {
-            position: absolute;
-            top: 3px;
-            right: 4px;
-        }
-    }
 
     &__icon {
         display: none;
@@ -213,49 +167,37 @@
         margin-left: 5px;
     }
 
-    // .header__container
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 13px 15px;
+        padding: 22px 15px;
     }
 
-    // .header__logo
     &__logo {
-        flex: 0 0 calc(133 / 1300 * 100%);
+        flex: 0 0 calc(130 / 1300 * 100%);
     }
-
-    // .header__nearby
     &__nearby {
         flex: 0 0 calc(180 / 1300 * 100%);
     }
-
-    // .header__subcribe
     &__subcribe {
-        flex: 0 0 calc(222 / 1300 * 100%);
+        flex: 0 1 calc(222 / 1300 * 100%);
         display: flex;
     }
-
-    // .header__ask
     &__ask {
-        flex: 0 0 calc(180 / 1300 * 100%);
+        flex: 0 1 calc(180 / 1300 * 100%);
         display: flex;
     }
-
-    // .header__number
     &__number {
         flex: 0 0 calc(253 / 1300 * 100%);
     }
-
-    // .header__callback
     &__callback {
-        flex: 0 0 calc(221 / 1300 * 100%);
+        flex: 0 0 calc(217 / 1300 * 100%);
     }
 
     @media (max-width: $xl + px) {
-        &__ask > div.ask-header__title {
-            display: none;
+        &__container {
+            gap: 4px;
         }
 
         &__number > div.number-header__title {
@@ -273,7 +215,10 @@
         }
 
         &__nearby {
-            flex: 0 0 calc(390 / 1300 * 100%);
+            flex: 1 0 calc(30 / 1300 * 100%);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
 
         &__callback {
@@ -281,17 +226,19 @@
         }
 
         &__number {
-            flex: 0 0 calc(280 / 1300 * 100%);
+            flex: 0 0 calc(320 / 1300 * 100%);
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 15px 0 0;
         }
     }
 
     @media (max-width: $md + px) {
-        // .header__logo
+
         &__nearby, &__subcribe, &__ask, &__callback{
             display: none;
         }
-
-        
+  
         .header__number .number-header__number {
             margin: 0;
         }
@@ -311,7 +258,7 @@
         }
 
         &__number {
-            flex: 0 0 169px;
+            flex: 0 0 180px;
             display: flex;
             align-items: center;
         }
@@ -322,13 +269,16 @@
         }
     }
 
-    @media (max-width: 368px) {
-        .header__number .number-header__number {
-            display: none;
+    @media (max-width: $sm + px) {
+        &__number {
+            flex: 0 0 169px;
         }
 
-        &__logo {
-            flex: 0 0 50px;
+    }
+
+    @media (max-width: 368px) {
+        .number-header__number {
+            display: none;
         }
     }
 }
@@ -341,12 +291,13 @@
     left: 0;
     background-color: #4460BF;
     width: 100%;
-    height: 100%;
+    height: 0;
     opacity: 0;
     transition: .5s all;
-    pointer-events: none;
+    z-index: 3;
 
     &._active {
+        height: 100%;
         opacity: 0.4;
     }
 }
@@ -370,14 +321,12 @@
         right: 0;
     }
 
-    // .menu__icon
     &__icon {
         display: none;
         z-index: 5;
         width: 26px;
         height: 20px;
         position: relative;
-        margin-left: 15px;
 
         & > div {
             position: absolute;
@@ -414,11 +363,13 @@
         &._active::before {
             top: 50%;
             transform: rotate(-45deg) translate(0px, -50%);
+            background-color: #5E5E5E;
         }
     
         &._active::after {
             bottom: 50%;
             transform: rotate(45deg) translate(0px, 50%);
+            background-color: #5E5E5E;
         }
 
         @media (max-width: $md + px) {
@@ -426,15 +377,8 @@
                 display: block;
             }
         }
-
-        @media (max-width: 350px) {
-            & {
-                margin-left: -14px;
-            }
-        }
     }
 
-    // .menu__body
     &__body {
         height: 100%;
         display: flex;
@@ -442,30 +386,34 @@
         justify-content: space-between;
     }
 
-    // .menu__list
     &__list {
         display: flex;
         gap: 22px;
     }
 
-    // .menu__item
+    &__column {
+        max-width: 153px;
+    }
+
     &__item {
         &:not(:first-child) {
             margin-top: 10px;
         }
     }
 
-    &__footer {
-    }
-
-    // .menu__link
     &__link {
         color: #292929;
         font-family: Inter;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 130%; /* 15.6px */
+        line-height: 130%; 
+    }
+
+    &__network {
+        margin-top: 20px;
     }
 }
 
+
+ 

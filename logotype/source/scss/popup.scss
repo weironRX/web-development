@@ -36,6 +36,7 @@
     &__header {
         display: flex;
         justify-content: flex-end;
+        width: 100%;
     }
 
     &__title {
@@ -63,8 +64,17 @@
     &__body {
         visibility: hidden;
         background-color: #03103C;
+        padding: 24px 21px 43px 21px;
         border-radius: 20px;
-        padding: 24px 33px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: $md + px) {
+            & {
+                padding: 24px 20px 43px 20px;
+            }
+        }
     }
 
     &__icon {
@@ -73,6 +83,7 @@
         height: 20px;
         position: relative;
         margin-left: 15px;
+        cursor: pointer;
 
 
         &::before, &::after {
@@ -97,18 +108,23 @@
             bottom: 50%;
             transform: rotate(45deg) translate(0px, 50%);
         }
+
+        @media (max-width: $md + px) {
+            &::before, &::after {
+                background-color: #FFF;
+            }
+        }
     }
 
     &__form {
-        @include adaptive-value("padding-left", 60, 0, 0);
-        @include adaptive-value("padding-right", 60, 0, 0);
-
         box-sizing: border-box;
         margin-top: 27px;
-        width: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 15px;
+        position: relative;
+        width: fit-content;
 
         @media (max-width: $sm + px) {
             & {
@@ -117,27 +133,72 @@
                 margin-right: -24px;
             }
         }
+
+        &::before {
+            color: #525252;
+            font-family: Inter;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            content: "Как вас зовут?";
+            position: absolute;
+            top: 3px;
+            left: 31px;
+            z-index: 5;
+        }
     }
 
     &__input {
-        box-sizing: border-box;
-        padding: 0 0 0 25px;
+        padding-left: 30px;
         height: 60px;
-        width: 100%;
+        width: 332px;
         background-color: #FFF;
         border-radius: 9px;
+        color: rgba(82, 82, 82, 0.90);
+        font-family: Inter;
+        box-sizing: border-box;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .label {
+        position: relative;
+
+        &::before {
+            color: #525252;
+            font-family: Inter;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: normal;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "Как вас зовут?";
+            width: 100px;
+            height: 20px;
+        }
     }
 
     &__button {
         background-color: #4460BF;
         padding: 17px 70px;
         border-radius: 9px;
+        border: 2px solid #4460BF;
 
         color: #FFF;
         font-family: Inter;
         font-size: 19px;
         font-weight: 800;
         line-height: normal;
+        transition: .5s all;
+
+        &:hover {
+            color: #4460BF;
+            background-color: #FFF;
+        }
     }
 
     &__agreement {

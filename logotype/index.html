@@ -17,31 +17,33 @@
                 </div>
                 <div class="header__nearby nearby-header">
                     <div class="nearby-header__question">
-                        <img src="./img/near.png" class="nearby-header__icon"></img>
+                        <img src="./img/marker.svg" class="nearby-header__icon"></img>
                         <div class="nearby-header__title">Ищете автошколу рядом с домом/учёбой?</div>
                     </div>
-                    <div class="nearby-header__button">Смотреть поблизости
+                    <button class="nearby-header__button">
+                        <span>Смотреть поблизости</span>
                         <img src='./img/arrow.svg' class="_ibg">
-                    </div>
+                    </button>
                 </div>
-                <div class="header__subcribe subcribe-header">
-                    <div class="subcribe-header__title">Подписывайтесь, чтобы быть в курсе событий</div>
-                    <a href="#"><img src="./img/icons/vk.svg" alt="icon" class="subcribe-header__icon"></a>
-                    <a href="#"><img src="./img/icons/dzen.svg" alt="icon" class="subcribe-header__icon"></a>
+                <div class="header__subcribe network">
+                    <div class="network__title">Подписывайтесь, чтобы быть в курсе событий</div>
+                    <a href="#"><img src="./img/icons/vk.svg" alt="icon" class="network__icon"></a>
+                    <a href="#"><img src="./img/icons/dzen.svg" alt="icon" class="network__icon"></a>
                 </div>
-                <div class="header__ask ask-header">
-                    <div class="ask-header__title">Задайте вопрос, мы онлайн</div>
-                    <a href="#"><img src="./img/icons/whatsapp.svg" alt="icon" class="ask-header__icon"></a>
-                    <a href="#"><img src="./img/icons/telegram.svg" alt="icon" class="ask-header__icon"></a>
+                <div class="header__ask network">
+                    <div class="network__title">Задайте вопрос, мы онлайн</div>
+                    <a href="#"><img src="./img/icons/whatsapp.svg" alt="icon" class="network__icon"></a>
+                    <a href="#"><img src="./img/icons/telegram.svg" alt="icon" class="network__icon"></a>
                 </div>
                 <div class="header__number number-header">
                     <div class="number-header__title">Звоните, мы работаем Пн-Вс 9:00-19:00</div>
                     <div class="number-header__number">+7 (495) 085 71 85</div>
                 </div>
                 <div class="header__callback callback-header">
-                    <img src='./img/red-phone.png' class="callback-header__icon _ibg">
-                    <button class="callback-header__button">обратный звонок
-                        <img src='./img/red-phone.png' class="_ibg">
+                    <img src='./img/red-phone.svg' class="callback-header__icon _ibg">
+                    <button class="callback-header__button callback-button callback-button_dark">
+                        <span class="callback-button__text">обратный звонок</span>
+                        <img src='./img/red-phone.svg' class="callback-button__image">
                     </button>
                 </div>
                 <div class="menu__icon">
@@ -77,12 +79,12 @@
                         <div class="menu__footer">
                             <div class="number-header">
                                 <div class="number-header__title">Звоните, мы работаем Пн-Вс 9:00-19:00</div>
-                                <div class="number-header__number">+7 (495) 085 71 85</div>
+                                <div class="number-header__number number-header__number_big">+7 (495) 085 71 85</div>
                             </div>
-                            <div class="ask-header">
-                                <div class="ask-header__title">Задайте вопрос, мы онлайн</div>
-                                <img src="./img/icons/whatsapp.svg" alt="icon" class="ask-header__icon">
-                                <img src="./img/icons/telegram.svg" alt="icon" class="ask-header__icon">
+                            <div class="menu__network network">
+                                <div class="network__title">Задайте вопрос, мы онлайн</div>
+                                <img src="./img/icons/whatsapp.svg" alt="icon" class="network__icon">
+                                <img src="./img/icons/telegram.svg" alt="icon" class="network__icon">
                             </div>
                         </div>
                     </nav>
@@ -104,8 +106,8 @@
                     <div class="custom-popup__title">Оставьте заявку на обучение, </div>
                     <div class="custom-popup__subtitle">и мы ответим вам в ближайшие 5-10 минут</div>
                     <form action="$" class="custom-popup__form">
-                        <input type="text" placeholder="Имя" autocomplete="off" name="form[]" class="custom-popup__input">
-                        <input type="text" placeholder="Номер телефона" autocomplete="off" name="form[]" class="custom-popup__input">
+                        <input type="text" placeholder="Имя" autocomplete="off" id="username" name="form[]" class="custom-popup__input label">
+                        <input type="text" placeholder="Номер телефона" id="phone" autocomplete="off" name="form[]" class="custom-popup__input">
                         <button type="submit" class="custom-popup__button">Записаться на урок</button>
                     </form>
                     <div class="custom-popup__agreement">Соглашаюсь с условиями <a href="#">политики конфиденциальности</a></div>
@@ -121,8 +123,8 @@
                             <a href="$"><img src="./img/icons/dzen.svg" class="allrights-footer__icon"></img></a>
                         </div>
                         <div class="allrights-footer__title">Подписывайтесь что быть в курсе последних событий </div>
+                        <div class="allrights-footer__name">Автошкола «Название» 2023 Все права защищены</div>
                     </div>
-                    <div class="allrights-footer__name">Автошкола «Название» 2023 Все права защищены</div>
                 </div>
                 <div class="footer__main main-footer">
                     <div class="main-footer__blue"></div>
@@ -174,8 +176,9 @@
                             <button class="address-footer__button"><span>Смотреть поблизости</span></button>
                         </div>
                         <div class="main-footer__callback callback-footer">
-                            <button class="callback-footer__button">обратный звонок
-                                <img src='./img/red-phone.png' class="_ibg">
+                            <button class="callback-footer__button callback-button">
+                                <span class="callback-button__text">обратный звонок</span>
+                                <img src='./img/red-phone.svg' class="callback-button__image">
                             </button>
                         </div>
                     </nav>

@@ -1,0 +1,20 @@
+.network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.network__title {
+  color: #616161;
+  font-family: Inter;
+  font-size: 12px; /* No adaptive */
+  font-weight: 400;
+  line-height: 139.023%;
+}
+.network__icon {
+  margin-left: 7px; /* No adaptive */
+  width: 32px;
+  height: 32px;
+}
