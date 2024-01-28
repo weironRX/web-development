@@ -1,18 +1,34 @@
-const swiper = new Swiper(".swiper-services", {
+new Swiper(".swiper-services", {
     slidesPerView: 1.332,
     loop: false,
     direction: 'horizontal',
     spaceBetween: 10,
 
     navigation: {
-        nextEl: '.controls-services__arrow-right',
-        prevEl: '.controls-services__arrow-left',
+        nextEl: '.services-next',
+        prevEl: '.services-prev',
     },
 
     breakpoints: {
         768: {
             spaceBetween: 30
         }
+    }
+})
+
+
+new Swiper(".swiper-testimonials", {
+    slidesPerView: 1,
+    loop: false,
+    parallax: true,
+
+    navigation: {
+        nextEl: '.testimonials-next',
+        prevEl: '.testimonials-prev',
+    },
+
+    autoplay: {
+        delay: 5000,
     }
 })
 
