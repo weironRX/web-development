@@ -795,15 +795,10 @@ body {
   padding-bottom: calc(30px + 29 * ((100vw - 320px) / 1040));
 }
 .header__logo {
-  color: #222222;
-  font-family: Fira Sans;
-  font-weight: 700;
-  line-height: 116.667%;
-  letter-spacing: -1px;
   cursor: pointer;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 51.4414414414%;
-          flex: 0 0 51.4414414414%;
+      -ms-flex: 0 0 51.3513513514%;
+          flex: 0 0 51.3513513514%;
 }
 @media (max-width: 767px) {
   .header__logo {
@@ -814,6 +809,9 @@ body {
   .header__logo {
     font-size: calc(20px + 4 * (90vw / 1360));
   }
+}
+.header__logo * > img {
+  height: 100%;
 }
 .header__search {
   -webkit-box-flex: 1;
@@ -1278,22 +1276,22 @@ body {
 .get-started__video-image {
   z-index: 3;
   position: absolute;
-  max-width: 46.6165413534%;
-  min-height: 180px;
-  min-width: 240px;
+  min-width: 260px;
+  max-width: 280px;
   top: 43.333333333%;
-  left: -10%;
+  left: -16%;
   -webkit-box-shadow: -42px 53px 100px 8px rgba(0, 0, 0, 0.2);
           box-shadow: -42px 53px 100px 8px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 767px) {
   .get-started__video-image {
     left: -18.7969924812%;
+    min-width: 400px;
   }
 }
 @media (min-width: 1360px) {
   .get-started__video-image {
-    left: -80px;
+    left: -126px;
   }
 }
 @media (min-width: 767px) {
@@ -1303,7 +1301,7 @@ body {
     display: flex;
   }
   .get-started__body {
-    width: 42.7027027027%;
+    width: 41.4414414414%;
   }
   .get-started__image {
     -webkit-box-flex: 0;
@@ -1512,10 +1510,12 @@ body {
   height: 100%;
   display: -ms-grid;
   display: grid;
-  gap: 12px;
+  -webkit-column-gap: 42px;
+     -moz-column-gap: 42px;
+          column-gap: 42px;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  -ms-grid-columns: 50% 12px 50%;
+  -ms-grid-columns: 50% 42px 50%;
   grid-template-columns: repeat(2, 50%);
   padding: 4px 0;
 }
@@ -1627,7 +1627,7 @@ body {
   }
 }
 .advantages_description {
-  margin-top: 13px;
+  margin-top: 20px;
 }
 .advantages__content {
   -webkit-box-flex: 0;
@@ -1645,6 +1645,7 @@ body {
 @media (min-width: 767px) {
   .advantages__body {
     width: 42.6%;
+    padding: 38px 0 0 0;
   }
 }
 @media (max-width: 767px) {
@@ -1675,8 +1676,8 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 51.1538461538%;
             flex: 0 0 51.1538461538%;
-    -webkit-transform: translate(-205.549845838%, 0);
-            transform: translate(-205.549845838%, 0);
+    -webkit-transform: translate(-198%, 0);
+            transform: translate(-198%, 0);
   }
 }
 @media (max-width: 767px) {
@@ -1699,7 +1700,7 @@ body {
           flex: 0 0 52.6315789474%;
   max-height: 453px;
   bottom: 0;
-  right: 0;
+  right: 14px;
 }
 @media (max-width: 575px) {
   .advantages__second-image {
@@ -1807,9 +1808,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header-discover__menu {
-    margin-left: 20px;
-  }
 }
 
 .menu-discover__list {
@@ -1818,17 +1816,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
-}
-@media (min-width: 767px) {
-  .menu-discover__list > * {
-    margin-left: 24px;
-  }
-}
-@media (min-width: 767px) and (max-width: 1140px) {
-  .menu-discover__list > * {
-    margin-left: calc(10px + 14 * ((100vw - 320px) / 820));
-  }
+  gap: 26px;
+  padding: 4px 5px 0 0;
 }
 @media (max-width: 767px) {
   .menu-discover__list {
@@ -1964,10 +1953,11 @@ body {
 }
 .gallery-discover__item {
   position: relative;
+  z-index: 4;
 }
 .gallery-discover__item_choosen {
-  -webkit-transform: translate(0, -20px);
-          transform: translate(0, -20px);
+  margin-bottom: 20px;
+  margin-top: -20px;
   -webkit-box-shadow: -34px 31px 100px 5px rgba(0, 0, 0, 0.12);
           box-shadow: -34px 31px 100px 5px rgba(0, 0, 0, 0.12);
   display: -webkit-box;
@@ -2117,11 +2107,11 @@ body {
 }
 
 .clients__container {
-  margin-bottom: 141px;
+  margin-bottom: 140px;
 }
 @media (max-width: 1140px) {
   .clients__container {
-    margin-bottom: calc(40px + 101 * ((100vw - 320px) / 820));
+    margin-bottom: calc(40px + 100 * ((100vw - 320px) / 820));
   }
 }
 @media (min-width: 767px) {

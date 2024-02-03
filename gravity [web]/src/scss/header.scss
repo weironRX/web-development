@@ -18,13 +18,12 @@
     &__logo {
         @include adaptive-font(24, 20);
 
-        color: $textColor;
-        font-family: Fira Sans;
-        font-weight: 700;
-        line-height: 116.667%;
-        letter-spacing: -1px;
         cursor: pointer;
-        flex: 0 0 calc(571/1110 * 100%);
+        flex: 0 0 calc(570/1110 * 100%);
+
+        * > img {
+            height: 100%;
+        }
     }
 
     // .header__search
