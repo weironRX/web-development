@@ -1,0 +1,39 @@
+/* DEFAULT ============================== */
+ 
+@import "tools.scss"; 
+@import "ui.scss";
+@import "settings.scss";
+
+
+/* GENRAL ITEMS ========================= */
+
+@import "header.scss";
+
+/* PAGES ================================= */
+
+@import "./pages/home/home.scss";
+
+ 
+
+._container {
+    max-width: #{$containerWidth + px};
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}  
+
+body { 
+    height: 100%; 
+}
+ 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.page {
+    flex: 1 0 auto;
+}
